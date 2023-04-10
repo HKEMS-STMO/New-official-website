@@ -1,0 +1,118 @@
+<!--弹窗-->
+<div id="overlay" style="display: block;">
+  <div class="popup">
+    <p class="popup_title">用户协议与隐私政策</p>
+    <p class="popup_content overflow-auto">欢迎访问海口实验中学科技社，在进行浏览前，请认真阅读《服务协议》和《隐私协议》全部条款。我们非常重视您的用户权益与个人信息的保护，我们将通过上诉协议向你说明我们如何为你提供服务并保障你的用户权益，如你同意，请点击“同意并继续”接受我们的服务。</p>
+    <div class="popup_btn">
+      <button class="cancelBtn ds" onclick="disagree()">不同意并退出</button>
+      <button class="confirmBtn ag" onclick="agree()">同意并继续</button>
+    </div>
+  </div>
+</div>
+<!-- 页眉 -->
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div>
+            <a href="/">
+                <img alt="logo" src="/images/UI/logo-big.png" style="height: 70px; width: 256px;" />
+            </a>
+        </div>
+        <div id="wpull">
+            <button onclick="pull()" class="navbar-toggler collapsed text-nowrap" style="border-style: none;" type="button" data-bs-toggle="collapse" data-bs-target="#pull-down-menu" aria-controls="pull-down-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <!--宽屏-->
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav navbar-expand-lg">
+                <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">关于我们</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">新闻动态</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">联系我们</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">友情链接</a></li>
+                <li class="nav-item">
+                    <div id="wsearch">
+                        <a class="nav-link" href="#search" data-bs-toggle="collapse" onclick="csearch()">
+                            <img alt="search" src="/images/UI/search.svg">
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="collapse" id="search">
+                        <form class="navbar-form navbar-right site-search d-flex" action="http://cn.bing.com/search" target="_blank">
+                            <div class="form-group">
+                                <input type="search" name="query" class="form-control me-2" placeholder="Search by Bing" value="">
+                                <input type="hidden" class="realQuery" name="q" value=" site:hkems-stmo.top">
+                            </div>
+                            <button type="submit" class="btn"><img alt="search" src="/images/UI/search.svg"></button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--窄屏下拉菜单-->
+<div class="stereoscopic-line"></div>
+<div class="collapse pull-down-menu" id="pull-down-menu">
+    <ul class="navbar-nav">
+        <li><a href="/">首页</a></li>
+        <div class="stereoscopic-line"></div>
+        <li><a href="/">关于我们</a></li>
+        <div class="stereoscopic-line"></div>
+        <li><a href="/">新闻动态</a></li>
+        <div class="stereoscopic-line"></div>
+        <li><a href="/">联系我们</a></li>
+        <div class="stereoscopic-line"></div>
+        <li><a href="/">友情链接</a></li>
+        <div class="stereoscopic-line"></div>
+    </ul>
+</div>
+<script>
+    var OurJS = window.OurJS = window.OurJS || {};
+    OurJS.Search = (function() {
+        var $siteSearchForm = $('.site-search')
+        var $inputQuery = $siteSearchForm.find('input')
+        var $realQuery = $siteSearchForm.find('.realQuery')
+        var $btnSubmit = $siteSearchForm.find('.btn')
+        var updateQuery = function(e) {
+            var query = $inputQuery.val()
+            $realQuery.val(query + ' site:hkems-stmo.top ')
+        }
+        $inputQuery.on('keyup', updateQuery)
+        $btnSubmit.on('click', updateQuery)
+        updateQuery()
+    })();
+</script>
+<script type="text/javascript">
+    function pull(){
+        wpull.innerHTML = "<button onclick='packup()' style='border-style: none;' class='navbar-toggler text-nowrap'><img alt='packup' src='/images/UI/packup.svg'/></button>";
+    }
+    function packup(){
+        wpull.innerHTML = "<button onclick='pull()' class='navbar-toggler collapsed text-nowrap' style='border-style: none;' type='button' data-bs-toggle='collapse' data-bs-target='#pull-down-menu' aria-controls='pull-down-menu' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button>";
+        $(function(){
+            $('.collapse').collapse('hide');
+        })
+    }
+    function psearch(){
+        wsearch.innerHTML = "<a class='nav-link' href='#search' data-bs-toggle='collapse' onclick='csearch()''><img alt='search' src='/images/UI/search.svg'></a>";
+        $(function(){
+            $('.collapse').collapse('hide');
+        })
+    }
+    function csearch(){
+        wsearch.innerHTML = "<a onclick='psearch()' class='nav-link'><img alt='search pakeup' src='/images/UI/left.svg'></a>";
+    }
+</script>
+<!--弹窗部分-->
+<script>
+    function agree(){
+        var overlay = document.getElementById("overlay");
+        overlay.style.display = "none";
+    }
+    function disagree(){
+        var params = getURLData()
+        window.location.href = 'https://cn.bing.com'
+    }
+</script>
+<!-- 页眉 共通 -->
