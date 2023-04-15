@@ -3,6 +3,10 @@ html {
     font-size: 100%;
 }
 
+p{
+  font-size: 100%;
+}
+
 nav{
     background-color: #e3f2fd;
 }
@@ -10,7 +14,7 @@ nav{
 button{
     border-style: none;
 }
-/*弹窗*/
+/*弹窗部分开始*/
 /* 遮罩层 */
 #overlay {
   position: fixed;
@@ -77,8 +81,9 @@ button{
     color: #ffffff;
     background-color: #337ab7;
   }
-/*弹窗*/
+/*弹窗部分结束*/
 
+/*下拉菜单*/
 .packups{
     border-style: none;
 }

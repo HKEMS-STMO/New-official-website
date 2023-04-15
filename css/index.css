@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(247,247,247);
+}
+
+.Slide-infor{
+    margin-top:5px;
+}
+
+.disappear{
+	display:none;
+}
