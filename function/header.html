@@ -41,12 +41,21 @@
                 <img alt="logo" src="/images/UI/logo-big.png" style="height: 60px;" />
             </a>
         </div>
-        <div id="wpull">
-            <button onclick="pull()" class="navbar-toggler collapsed text-nowrap" style="border-style: none;"
-                type="button" data-bs-toggle="collapse" data-bs-target="#pull-down-menu" aria-controls="pull-down-menu"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <div>
+            <span id="searchpull">
+                <button onclick="searpull()" class="navbar-toggler collapsed" style="border-style: none;" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#pull-down-search" aria-controls="pull-down-search"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <img alt="search" src="/images/UI/search.svg">
+                </button>
+            </span>
+            <span id="wpull">
+                <button onclick="pull()" class="navbar-toggler collapsed" style="border-style: none;" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#pull-down-menu" aria-controls="pull-down-menu"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </span>
         </div>
         <!--宽屏-->
         <div class="collapse navbar-collapse">
@@ -96,6 +105,15 @@
         <div class="stereoscopic-line"></div>
     </ul>
 </div>
+
+<div class="collapse pull-down-search" id="pull-down-search">
+    <form class="navbar-form navbar-right site-search d-flex" action="https://cn.bing.com/search" target="_blank">
+        <div class="form-group">
+            <input type="search" name="query" class="form-control me-2" placeholder="Search by Bing" value="">
+            <input type="hidden" class="realQuery" name="q" value=" site:hkems-stmo.top">
+        </div>
+    </form>
+</div>
 <!--搜索栏部分-->
 <script>
     var OurJS = window.OurJS = window.OurJS || {};
@@ -116,13 +134,30 @@
 <!--下拉栏与图标变换部分-->
 <script>
     function pull() {
-        wpull.innerHTML = "<button onclick='packup()' style='border-style: none;' class='navbar-toggler text-nowrap'><img alt='packup' src='/images/UI/packup.svg'/></button>";
-    }
-    function packup() {
-        wpull.innerHTML = "<button onclick='pull()' class='navbar-toggler collapsed text-nowrap' style='border-style: none;' type='button' data-bs-toggle='collapse' data-bs-target='#pull-down-menu' aria-controls='pull-down-menu' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button>";
         $(function () {
             $('.collapse').collapse('hide');
         })
+        searchpackup();
+        wpull.innerHTML = "<button onclick='packup()' style='border-style: none;' class='navbar-toggler text-nowrap'><img alt='packup' src='/images/UI/packup.svg'/></button>";
+    }
+    function searpull() {
+        $(function () {
+            $('.collapse').collapse('hide');
+        })
+        packup();
+        searchpull.innerHTML = "<button onclick='searchpackup()' style='border-style: none;' class='navbar-toggler text-nowrap'><img alt='packup' src='/images/UI/search.svg'/></button>";
+    }
+    function packup() {
+        $(function () {
+            $('.collapse').collapse('hide');
+        })
+        wpull.innerHTML = "<button onclick='pull()' class='navbar-toggler collapsed text-nowrap' style='border-style: none;' type='button' data-bs-toggle='collapse' data-bs-target='#pull-down-menu' aria-controls='pull-down-menu' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button>";
+    }
+    function searchpackup() {
+        $(function () {
+            $('.collapse').collapse('hide');
+        })
+        searchpull.innerHTML = "<button onclick='searpull()' class='navbar-toggler collapsed text-nowrap' style='border-style: none;' type='button' data-bs-toggle='collapse' data-bs-target='#pull-down-search' aria-controls='pull-down-search' aria-expanded='false' aria-label='Toggle navigation'><img alt='packup' src='/images/UI/search.svg'/></button>";
     }
     function psearch() {
         wsearch.innerHTML = "<a class='nav-link' href='#search' data-bs-toggle='collapse' onclick='csearch()''><img alt='search' src='/images/UI/search.svg'></a>";
