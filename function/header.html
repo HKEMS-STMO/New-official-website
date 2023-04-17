@@ -1,3 +1,4 @@
+<div class="allheader">
 <!--弹窗-->
 <div class="container">
     <div class="row">
@@ -38,7 +39,7 @@
     <nav class="navbar navbar-expand-lg">
         <div>
             <a href="/">
-                <img alt="logo" src="/images/UI/logo-big.png" style="height: 60px;" />
+                <img alt="logo" src="/images/UI/logo-big.svg" style="height: 55px;" />
             </a>
         </div>
         <div class="text-nowrap">
@@ -89,6 +90,7 @@
         </div>
     </nav>
 </header>
+<!-- 页眉 -->
 <!--窄屏下拉菜单-->
 <div class="stereoscopic-line"></div>
 <div class="collapse pull-down-menu" id="pull-down-menu">
@@ -105,32 +107,19 @@
         <div class="stereoscopic-line"></div>
     </ul>
 </div>
-
-<div class="collapse pull-down-search" id="pull-down-search">
-    <form class="navbar-form navbar-right site-search d-flex" action="https://cn.bing.com/search" target="_blank">
-        <div class="form-group">
+<!--搜索栏部分下拉菜单-->
+<div class="collapse pull-down-search pullsearchdiv" id="pull-down-search">
+    <div style="height: 15px;"></div>
+    <form class="navbar-form navbar-right site-search pullsearch" action="https://cn.bing.com/search" target="_blank">
+        <div>
             <input type="search" name="query" class="form-control me-2" placeholder="Search by Bing" value="">
             <input type="hidden" class="realQuery" name="q" value=" site:hkems-stmo.top">
         </div>
+        <button type="submit"><img alt="search" src="/images/UI/search.svg"></button>
     </form>
+    <div style="height: 15px;"></div>
+    <div class="stereoscopic-line"></div>
 </div>
-<!--搜索栏部分-->
-<script>
-    var OurJS = window.OurJS = window.OurJS || {};
-    OurJS.Search = (function () {
-        var $siteSearchForm = $('.site-search')
-        var $inputQuery = $siteSearchForm.find('input')
-        var $realQuery = $siteSearchForm.find('.realQuery')
-        var $btnSubmit = $siteSearchForm.find('.btn')
-        var updateQuery = function (e) {
-            var query = $inputQuery.val()
-            $realQuery.val(query + ' site:hkems-stmo.top ')
-        }
-        $inputQuery.on('keyup', updateQuery)
-        $btnSubmit.on('click', updateQuery)
-        updateQuery()
-    })();
-</script>
 <!--下拉栏与图标变换部分-->
 <script>
     function pull() {
@@ -145,7 +134,7 @@
             $('.collapse').collapse('hide');
         })
         packup();
-        searchpull.innerHTML = "<button onclick='searchpackup()' style='border-style: none;' class='navbar-toggler text-nowrap'><img alt='packup' src='/images/UI/search.svg'/></button>";
+        searchpull.innerHTML = "<button onclick='searchpackup()' style='border-style: none;' class='navbar-toggler text-nowrap'><img alt='packup' src='/images/UI/packup.svg'/></button>";
     }
     function packup() {
         $(function () {
@@ -181,4 +170,23 @@
         window.location.href = 'https://cn.bing.com'
     }
 </script>
+<!--搜索函数部分-->
+<script>
+    var OurJS = window.OurJS = window.OurJS || {};
+    OurJS.Search = (function () {
+        var $siteSearchForm = $('.site-search')
+        var $inputQuery = $siteSearchForm.find('input')
+        var $realQuery = $siteSearchForm.find('.realQuery')
+        var $btnSubmit = $siteSearchForm.find('.btn')
+        var updateQuery = function (e) {
+            var query = $inputQuery.val()
+            $realQuery.val(query + ' site:hkems-stmo.top ')
+        }
+        $inputQuery.on('keyup', updateQuery)
+        $btnSubmit.on('click', updateQuery)
+        updateQuery()
+    })();
+</script>
 <!-- 页眉 共通 -->
+</div>
+<div style="height: 71px;"></div>

@@ -1,8 +1,20 @@
-//ie判断
+/*---公共部分引用开始---*/
+$(function(){
+  $(".header").load("/function/header.html");
+  $(".footerpage").load("http://www.load.com/footer.html");
+});
+/*---公共部分引用结束---*/
+
+/*屏幕像素检测开始*/
+if (screen.width < 368)
+  window.location.href = "https://cn.bing.com";
+/*屏幕像素检测结束*/
+
+/*---ie判断开始---*/
 function isIE() {
     if (!!window.ActiveXObject || 'ActiveXObject' in window || navigator.userAgent.indexOf("Edge") > -1) return true
     else return false
-  }
+}
 
 //获取url上携带的参数
 function getURLData () {
@@ -41,9 +53,5 @@ function getIEVersion() {
     window.location.href = '/function/browser.html'
   }
 
-//公共部分引用开始
-$(function(){
-    $(".header").load("/function/header.html");
-    $(".footerpage").load("http://www.load.com/footer.html");
-});
-//公共部分引用结束
+/*---ie判断结束---*/
+

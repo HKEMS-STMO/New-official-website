@@ -1,18 +1,24 @@
 /* 页眉 */
 html {
-    font-size: 100%;
+    font-size: 100%
 }
 
 p{
-  font-size: 100%;
+  font-size: 100%
 }
 
-nav{
-    background-color: #e3f2fd;
+.allheader{
+  width: 100%;
+  position:fixed
+}
+
+header{
+  width: 100%;
+  background-color: #e3f2fd;
 }
 
 button{
-    border-style: none;
+    border-style: none
 }
 /*弹窗部分开始*/
 /* 遮罩层 */
@@ -22,7 +28,7 @@ button{
   top: 0px;
   height: 100%;
   background-color: #cccccc;
-  z-index: 100;
+  z-index: 100
 }
 /* 弹出框主体 */
 .popup {
@@ -30,13 +36,13 @@ button{
   height: 430px;
   border-radius: 5px;
   margin: 100px auto;
-  text-align: center;
+  text-align: center
 }
 /* 弹出框的标题 */
 .popup_title {
   height: 60px;
   line-height: 60px;
-  border-bottom: solid 1px #cccccc;
+  border-bottom: solid 1px #cccccc
 }
 /* 弹出框的内容 */
 .popup_content {
@@ -46,17 +52,17 @@ button{
   height: 200px;
   line-height: 45px;
   padding: 10px 20px;
-  text-indent:2em;
+  text-indent:2em
 }
 .popup_line{
   margin: 0 auto;
   height: 20px;
   width: 85%;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb
 }
 /* 弹出框的按钮栏 */
 .popup_btn {
-  padding-top: 30px;
+  padding-top: 30px
 }
 /* 弹出框的按钮 */
 .popup_btn button.ds {
@@ -68,7 +74,7 @@ button{
   border-radius: 5px;
   margin: 5px 10px;
   color: #ffffff;
-  background-color: rgb(150,150,150);
+  background-color: rgb(150,150,150)
 }
 .popup_btn button.ag {
     color: #778899;
@@ -79,18 +85,18 @@ button{
     border-radius: 5px;
     margin: 5px 10px;
     color: #ffffff;
-    background-color: #337ab7;
+    background-color: #337ab7
   }
 /*弹窗部分结束*/
 
 /*下拉菜单*/
 .packups{
-    border-style: none;
+    border-style: none
 }
 
 .nav-link:hover{
     border-bottom: 2px solid rgb(38, 38, 38);
-    margin-bottom: -2px;
+    margin-bottom: -2px
 }
 
 .pull-down-menu{
@@ -105,23 +111,32 @@ button{
     text-decoration:none;
     margin-top:15px;
     margin-bottom:15px;
-    margin-left: 15px;
+    margin-left: 15px
 
 }
 
 .pull-down-menu a:hover {
-    color:rgb(0, 0, 0);
+    color:rgb(0, 0, 0)
 }
 
 .pull-down-menu .nopoint{
-    list-style-type:none;
+    list-style-type:none
+}
+
+.pullsearchdiv{
+  background-color: rgb(242,242,242)
+}
+
+.pullsearch{
+  margin-left: 15px;
+  margin-right: 15px
 }
 
 .stereoscopic-line{
     background-color: rgb(230,230,230);
-    height: 2px;
+    height: 2px
 }
 
 .psearch{
-    text-align: right;
+    text-align: right
 }
