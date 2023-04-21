@@ -13,9 +13,24 @@
     <!--Microsoft clarity-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="page-enter" content="revealTrans(duration=5.0,transition=20)">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
     <title>网站运行概况 - 海口实验中学科技社</title>
-    <meta name="keywords" content="网站运行概况,科技社,海口实验中学科技社,海口实验中学,海口实验中学高中部,hksyzxkjs,Science and Technology Club,Science and Technology Matching Organization" />
-    <meta name="description" content="本页面提供了本网站的服务运行状态检测，可供社内外人士了解、分析本网站的历史运行状况，以便于网站维护。特别感谢由UptimeRobot与STATUS提供的技术支持。" />
+    <meta name="keywords"
+        content="网站运行概况,科技社,海口实验中学科技社,海口实验中学,海口实验中学高中部,hksyzxkjs,Science and Technology Club,Science and Technology Matching Organization" />
+    <meta name="description"
+        content="本页面提供了本网站的服务运行状态检测，可供社内外人士了解、分析本网站的历史运行状况，以便于网站维护。特别感谢由UptimeRobot与STATUS提供的技术支持。" />
+    <meta name="application-name" content="网站运行概况 - 海口实验中学科技社" />
+    <meta name="msapplication-tooltip" content="网站运行概况 - 海口实验中学科技社" />
+    <meta name="revisit-after" content="1days" />
+    <meta name="revised" content="马志伟, 2023年4月22日" />
+    <meta name="author" content="马志伟, maqingshui@outlook.com">
+    <meta name="renderer" content="webkit">
+    <meta property="og:title" content="网站运行概况 - 海口实验中学科技社">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content=" https://hkems-stmo.top/">
+    <meta property="og:image" content="https://new.mqsi.xyz/images/UI/logo-small.png">
+    <meta name="copyright" content="本网站版权归海口实验中学科技社所有">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/js/function.js"></script>
     <script type="text/javascript">
@@ -28,13 +43,36 @@
     <link rel="stylesheet" type="text/css" href="/uptime/static/css/main.css">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/css/index.css" />
     <link rel="icon" href="/images/icon/favicon32.png" sizes="32x32" />
     <link rel="icon" href="/images/icon/favicon192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/images/icon/favicon180.png" />
     <meta name="msapplication-TileImage" content="/images/icon/favicon270.png" />
+    <script>
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i].trim();
+                if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); }
+            }
+            return "";
+        }
+        function checkCookie() {
+            var useagreement = getCookie("popagreement");
+            //未同意用户协议
+            if (useagreement != "1") {
+                overlay.style.display = "block";
+            }
+            //已同意用户协议及其他状态
+            else {
+                overlay.style.display = "none";
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body onload="checkCookie()">
     <div class="header"></div>
     <h1 style="display: none;">网站运行概况 - 海口实验中学科技社</h1>
     <div id="app"></div>
