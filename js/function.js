@@ -121,7 +121,7 @@ function agree() {
   var overlay = document.getElementById("overlay");
   overlay.style.display = "none";
   //写入同意条款的cookie，过期时间2043年
-  document.cookie = "popagreement = 1; expires=Thu, 18 Dec 2043 12:00:00 GMT";
+  document.cookie = "popagreement = 1; expires=Thu, 18 Dec 2043 12:00:00 GMT ; path=/";
   //初始化位置，避免穿透滑动造成的不在开头
   window.location.href = '#top'
 }
