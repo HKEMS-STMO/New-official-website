@@ -3,13 +3,12 @@ html {
     font-size: 100%
 }
 
+::selection {
+  color: #fff;
+  background: #66c1fa;
+}
 p{
   font-size: 100%
-}
-
-.allheader{
-  width: 100%;
-  position:fixed
 }
 
 header{
@@ -20,6 +19,12 @@ header{
 button{
     border-style: none
 }
+
+.allheader{
+  width: 100%;
+  position:fixed
+}
+
 /*弹窗部分开始*/
 /* 遮罩层 */
 #overlay {
