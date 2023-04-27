@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 
 <head>
     <!--Microsoft clarity-->
@@ -30,7 +30,6 @@
     <meta property="og:image" content="https://new.mqsi.xyz/images/UI/logo-small.png">
     <meta name="copyright" content="本网站版权归海口实验中学科技社所有">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="/js/function.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/common.css" />
     <link rel="stylesheet" type="text/css" href="/css/index.css" />
@@ -38,31 +37,9 @@
     <link rel="icon" href="/images/icon/favicon192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/images/icon/favicon180.png" />
     <meta name="msapplication-TileImage" content="/images/icon/favicon270.png" />
-    <script>
-        function getCookie(cname) {
-            var name = cname + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i].trim();
-                if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); }
-            }
-            return "";
-        }
-        function checkCookie() {
-            var useagreement = getCookie("popagreement");
-            //未同意用户协议
-            if (useagreement != "1") {
-                overlay.style.display = "block";
-            }
-            //已同意用户协议及其他状态
-            else {
-                overlay.style.display = "none";
-            }
-        }
-    </script>
 </head>
 
-<body id="top" onload="checkCookie()">
+<body id="top">
     <!--页眉 开始-->
     <div class="header"></div>
     <!--页眉 结束-->
@@ -74,10 +51,10 @@
         <div class="Slide-infor">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-5">
+                    <div class="col-xs-12 col-md-6 box-shadow-panel home-categories-left">
                         <p>左轮播图栏<br><a href="/uptime/index.html">网站运行概况</a></p>
                     </div>
-                    <div class="col-sm-7" style="height: 50px;">
+                    <div class="col-xs-12 col-md-6 box-shadow-panel home-categories-right">
                         <p>右置顶消息栏<br>测试</p>
                     </div>
                 </div>
@@ -85,6 +62,7 @@
         </div>
     </div>
     <!--内容部分-->
+    <script src="/js/function.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>

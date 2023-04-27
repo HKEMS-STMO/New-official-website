@@ -7,7 +7,7 @@ $(function () {
 
 /*屏幕像素检测开始*/
 if (screen.width < 368)
-  window.location.href = "https://cn.bing.com";
+  window.location.href = "/function/toonarrow.html";
 /*屏幕像素检测结束*/
 
 /*---ie判断开始---*/
@@ -54,3 +54,12 @@ if (IEVersion && IEVersion < 10) {
 }
 
 /*---ie判断结束---*/
+
+/*--cookie写入函数开始--*/
+function setCookie(cname,cvalue,exdays){
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
+}
+/*--cookie写入函数结束--*/
