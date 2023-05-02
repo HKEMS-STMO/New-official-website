@@ -1,7 +1,7 @@
 window.Config = {
 
   // 显示标题
-  SiteName: '网站运行概况 - 海口实验中学科技社',
+  SiteName: '网站运行概况',
 
   // UptimeRobot Api Keys
   // 支持 Monitor-Specific 和 Read-Only

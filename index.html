@@ -23,7 +23,7 @@
     <meta name="application-name" content="海口实验中学科技社 | HKEMS-STMO" />
     <meta name="msapplication-tooltip" content="海口实验中学科技社 | HKEMS-STMO" />
     <meta name="revisit-after" content="1days" />
-    <meta name="revised" content="马志伟, 2023年4月22日" />
+    <meta name="revised" content="马志伟, 2023年4月28日" />
     <meta name="author" content="马志伟, maqingshui@outlook.com">
     <meta name="renderer" content="webkit">
     <meta property="og:title" content="海口实验中学科技社 | HKEMS-STMO">
@@ -32,6 +32,8 @@
     <meta property="og:image" content="https://new.mqsi.xyz/images/UI/logo-small.png">
     <meta name="copyright" content="本网站版权归海口实验中学科技社所有">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/js/function.js"></script>
+    <link rel="prefetch" href="/function/header.html">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/common.css" />
     <link rel="stylesheet" type="text/css" href="/css/index.css" />
@@ -55,7 +57,45 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-6 box-shadow-panel home-categories-left">
                         <p>
-                            <a href="https://hkems-stmo.top">旧版网站</a>
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img src="/images/upload/2022noc.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h5>Slide label test</h5>
+                                  <p>The t
+                                    ext test</p>
+                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                <img src="/images/upload/2022noc.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h5>Second slide label</h5>
+                                  <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                <img src="/images/upload/2022noc.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h5>Third slide label</h5>
+                                  <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                                </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                                </button>
+                                </div>
                             <br>
                             <a href="/uptime/index.html">网站运行概况</a>
                     </div>
@@ -67,7 +107,6 @@
         </div>
     </div>
     <!--内容部分-->
-    <script src="/js/function.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>

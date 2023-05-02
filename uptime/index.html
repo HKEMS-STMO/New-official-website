@@ -23,7 +23,7 @@
     <meta name="application-name" content="网站运行概况 - 海口实验中学科技社" />
     <meta name="msapplication-tooltip" content="网站运行概况 - 海口实验中学科技社" />
     <meta name="revisit-after" content="1days" />
-    <meta name="revised" content="马志伟, 2023年4月22日" />
+    <meta name="revised" content="马志伟, 2023年4月28日" />
     <meta name="author" content="马志伟, maqingshui@outlook.com">
     <meta name="renderer" content="webkit">
     <meta property="og:title" content="网站运行概况 - 海口实验中学科技社">
@@ -48,31 +48,9 @@
     <link rel="icon" href="/images/icon/favicon192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/images/icon/favicon180.png" />
     <meta name="msapplication-TileImage" content="/images/icon/favicon270.png" />
-    <script>
-        function getCookie(cname) {
-            var name = cname + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i].trim();
-                if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); }
-            }
-            return "";
-        }
-        function checkCookie() {
-            var useagreement = getCookie("popagreement");
-            //未同意用户协议
-            if (useagreement != "1") {
-                overlay.style.display = "block";
-            }
-            //已同意用户协议及其他状态
-            else {
-                overlay.style.display = "none";
-            }
-        }
-    </script>
 </head>
 
-<body onload="checkCookie()">
+<body>
     <div class="header"></div>
     <h1 style="display: none;">网站运行概况 - 海口实验中学科技社</h1>
     <div id="app"></div>
