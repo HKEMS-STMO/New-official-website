@@ -6,7 +6,7 @@ $(function () {
 /*---公共部分引用结束---*/
 
 /*屏幕像素检测开始*/
-if (screen.width < 368)
+if (screen.width < 370)
   window.location.href = "/function/toonarrow.html";
 /*屏幕像素检测结束*/
 
@@ -54,3 +54,7 @@ if (IEVersion && IEVersion < 10) {
 }
 
 /*---ie判断结束---*/
+
+/*--写入控制台信息开始--*/
+console.log("欢迎对本站进行F12调试，Bug反馈，优化建议等请联系我们：HKEMS-STMO@outlook.com")
+/*---写入控制台信息结束---*/
