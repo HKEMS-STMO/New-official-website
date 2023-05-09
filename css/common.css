@@ -9,7 +9,12 @@ html {
 }
 
 p{
-  font-size: 16px
+  font-size: 100%
+}
+
+#click{
+  font-size: 15px;
+  user-select:none
 }
 
 header{
