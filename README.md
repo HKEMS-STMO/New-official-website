@@ -41,4 +41,10 @@ Since its establishment, under the leadership of various cadres, we have carried
 
 2023/4/22 琐事：修复cookie单页可用性问题;壮举：完善用户协议与隐私政策弹窗机制（cookie），JavaScript整理
 
-2023/4/28 琐事：修复加载时间过长引起的cookie用户协议验证脚本无法写入对象问题 
+2023/4/28 琐事：修复加载时间过长引起的cookie用户协议验证脚本无法写入对象问题
+
+2023/5/3 琐事：性能，加载速度优化(logo瘦身至6k)
+
+2023/5/7 壮举：添加页脚，增加鼠标点击特效，优化文件结构及大小
+
+2023/5/7 琐事：UI优化，更换图标库的CDN
