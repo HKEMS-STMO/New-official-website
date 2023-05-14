@@ -1,11 +1,11 @@
 /* 页眉 */
-html {
-    font-size: 100%
-}
-
 ::selection {
   color: #fff;
   background: #66c1fa;
+}
+
+h1{
+  margin-top: 40px;
 }
 
 p{
@@ -171,4 +171,13 @@ footer{
 
 .back-top span{
   font-size: small;
+}
+
+.language{
+  font-size: larger;
+  margin-left: 3%;
+}
+
+.language .btn{
+  text-decoration: none;
 }
