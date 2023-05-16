@@ -6,7 +6,7 @@ $(function () {
 /*---公共部分引用结束---*/
 
 /*屏幕像素检测开始*/
-if (screen.width < 370)
+if (screen.width < 300)
   window.location.href = "/function/toonarrow.html";
 /*屏幕像素检测结束*/
 
