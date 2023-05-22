@@ -22,6 +22,17 @@ header{
   background-color: #e3f2fd;
 }
 
+.header{
+  height: 66px;
+  width: 100%;
+  background-color: #e3f2fd;
+}
+
+noscript{
+  display:flex;/*实现垂直居中*/
+  justify-content:center;
+}
+
 button{
     border-style: none
 }
