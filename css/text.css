@@ -1,0 +1,51 @@
+h1{
+    font-size: 25px;
+}
+
+h5 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.Slide-infor {
+    margin-top: 5px;
+}
+
+.title {
+    margin-top: -15px;
+    text-align: center;
+}
+
+.maintext{
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin: auto;
+}
+
+em{
+    font-size: medium;
+}
+
+.fill{
+    height: 20px;
+}
+
+.author{
+    text-align: right;
+    line-height: 2
+}
+
+p.name{
+    font-size: 1.2;
+}
+
+p.text{
+    text-indent:2em;
+}
