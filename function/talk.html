@@ -1,0 +1,17 @@
+<link href="/css/talk.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/talk.js"></script>
+<script type="text/javascript" src="/js/md5.min.js"></script>
+<div id="gitalk-container"></div> 
+<script>
+    var gitalk = new Gitalk({
+        clientID: '25ac5e9ec97000de85f1',
+        clientSecret: '72d669f0b195de592bb6659f26b6a62080645830',
+        repo: 'talk',
+        owner: 'X-MQSI',
+        admin: ['X-MQSI'],
+        id: md5(location.pathname),
+        language:'zh-CN',
+        distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>

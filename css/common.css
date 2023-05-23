@@ -192,3 +192,7 @@ footer{
 .language .btn{
   text-decoration: none;
 }
+
+.fill{
+  height: 20px;
+}

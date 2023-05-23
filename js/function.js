@@ -2,6 +2,7 @@
 $(function () {
   $(".header").load("/function/header.html");
   $(".footer").load("/function/footer.html");
+  $(".talk").load("/function/talk.html");
 });
 /*-公共引用-*/
 
