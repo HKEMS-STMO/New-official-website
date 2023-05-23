@@ -49,3 +49,7 @@ p.name{
 p.text{
     text-indent:2em;
 }
+
+.gitalk-container{
+    width: 80%;
+}

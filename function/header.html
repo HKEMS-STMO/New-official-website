@@ -1,3 +1,7 @@
+<link rel="icon" href="/images/icon/favicon32.png" sizes="32x32" />
+<link rel="icon" href="/images/icon/favicon192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="/images/icon/favicon180.png" />
+<meta name="msapplication-TileImage" content="/images/icon/favicon270.png" />
 <link rel="apple-touch-icon" href="/images/icon/favicon180.png"/>
 <!--Microsoft clarity-->
 <script type="text/javascript">
@@ -92,27 +96,23 @@
                     <li class="nav-item"><a class="nav-link" href="/">新闻动态</a></li>
                     <li class="nav-item"><a class="nav-link" href="/">联系我们</a></li>
                     <li class="nav-item"><a class="nav-link" href="/">友情链接</a></li>
-                    <li class="nav-item">
-                        <div id="wsearch">
-                            <a class="nav-link" href="#search" data-bs-toggle="collapse" onclick="csearch()">
-                                <i class="bi bi-search"></i>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="collapse" id="search">
-                            <form class="navbar-form navbar-right site-search d-flex"
-                                action="https://cn.bing.com/search" target="_blank">
-                                <div class="form-group">
-                                    <input type="search" name="query" class="form-control me-2"
-                                        placeholder="Site Search by Bing" value="">
-                                    <input type="hidden" class="realQuery" name="q" value=" site:hkems-stmo.top">
-                                </div>
-                                <button type="submit" class="btn"><i class="bi bi-search"></i></button>
-                            </form>
-                        </div>
-                    </li>
                 </ul>
+                <div id="wsearch">
+                    <a class="nav-link" href="#search" data-bs-toggle="collapse" onclick="csearch()">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </div>
+                <div class="collapse pcsearch" id="search">
+                    <form class="navbar-form navbar-right site-search d-flex"
+                        action="https://cn.bing.com/search" target="_blank">
+                        <div class="form-group">
+                            <input type="search" name="query" class="form-control me-2"
+                                placeholder="Site Search by Bing" value="">
+                            <input type="hidden" class="realQuery" name="q" value=" site:hkems-stmo.top">
+                        </div>
+                        <button type="submit" class="btn"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
             </div>
         </nav>
     </header>

@@ -1,11 +1,11 @@
 /* 页眉 */
 ::selection {
   color: #fff;
-  background: #66c1fa;
+  background: #66c1fa
 }
 
 h1{
-  margin-top: 40px;
+  margin-top: 40px
 }
 
 p{
@@ -19,18 +19,18 @@ p{
 
 header{
   width: 100%;
-  background-color: #e3f2fd;
+  background-color: #e3f2fd
 }
 
 .header{
   height: 66px;
   width: 100%;
-  background-color: #e3f2fd;
+  background-color: #e3f2fd
 }
 
 noscript{
-  display:flex;/*实现垂直居中*/
-  justify-content:center;
+  display:flex;
+  justify-content:center
 }
 
 button{
@@ -38,7 +38,7 @@ button{
 }
 
 .center{
-  text-align: center;
+  text-align: center
 }
 
 .allheader{
@@ -115,6 +115,15 @@ button{
   }
 /*弹窗部分结束*/
 
+#wsearch{
+  margin-left: 10px
+}
+
+.pcsearch{
+  margin-left: 10px;
+  font-size: small
+}
+
 /*下拉菜单*/
 .packups{
     border-style: none
@@ -127,7 +136,7 @@ button{
 
 .pull-down-menu{
     background-color: rgb(242,242,242);
-    list-style-type:none;
+    list-style-type:none
 }
 
 .pull-down-menu a {
@@ -168,29 +177,29 @@ button{
 
 footer{
   width: 100%;
-  background-color: rgb(242,242,242);
+  background-color: rgb(242,242,242)
 }
 .back-top {
   text-align: center;
-  font-size: larger;
+  font-size: larger
 }
 
 .back-top a{
   text-decoration: none;
-  color: #444;
+  color: #444
 }
 
 .back-top span{
-  font-size: small;
+  font-size: small
 }
 
 .language{
   font-size: larger;
-  margin-left: 3%;
+  margin-left: 3%
 }
 
 .language .btn{
-  text-decoration: none;
+  text-decoration: none
 }
 
 .fill{
