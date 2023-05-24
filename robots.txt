@@ -1,1 +1,2 @@
-Sitemap:https://new.hkems-stmo.top/sitemap.txt
+Sitemap:https://new.hkems-stmo.top/sitemap/sitemap.txt
+Sitemap:https://new.hkems-stmo.top/sitemap/sitemap-photo.txt
