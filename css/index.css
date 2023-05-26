@@ -2,11 +2,36 @@
     margin-top:5px;
 }
 
+.maininfor{
+    text-align: center;
+}
+
+.welcome{
+    height: auto;
+    background-color: rgb(238,238,238);
+}
+
+.welcome h2{
+    padding: 20px 0px 0px 0px;
+    color: rgb(130,130,130);
+}
+
+.welcome h3{
+    padding: 5px 0px 10px 0px;
+    color: rgb(100,100,100);
+}
+
+
 .disappear{
 	display:none;
 }
 
 #content{
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.Slideshow{
+    background-color: gray;
 }
