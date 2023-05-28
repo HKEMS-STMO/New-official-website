@@ -90,7 +90,7 @@
         <nav class="navbar navbar-expand-lg">
             <div>
                 <a href="/">
-                    <img alt="logo" src="/images/UI/logo-big.png" style="width: 243px;height: 50px;" />
+                    <img class="logo" alt="logo" src="/images/UI/logo-big.png" />
                 </a>
             </div>
             <div class="text-nowrap">
@@ -103,7 +103,7 @@
                     <button onclick="pull()" class="navbar-toggler collapsed" style="border-style: none;" type="button"
                         data-bs-toggle="collapse" data-bs-target="#pull-down-menu" aria-controls="pull-down-menu"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <i class="bi bi-list"></i>
                     </button>
                 </span>
             </div>
@@ -209,7 +209,7 @@
         $(function () {
             $('.collapse').collapse('hide');
         })
-        wpull.innerHTML = "<button onclick='pull()' class='navbar-toggler collapsed text-nowrap' style='border-style: none;' type='button' data-bs-toggle='collapse' data-bs-target='#pull-down-menu' aria-controls='pull-down-menu' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button>";
+        wpull.innerHTML = "<button onclick='pull()' class='navbar-toggler collapsed text-nowrap' style='border-style: none;' type='button' data-bs-toggle='collapse' data-bs-target='#pull-down-menu' aria-controls='pull-down-menu' aria-expanded='false' aria-label='Toggle navigation'><i class='bi bi-list'></i></button>";
     }
     function searchpackup() {
         $(function () {

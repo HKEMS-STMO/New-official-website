@@ -1,49 +1,83 @@
 h1{
-    font-size: 25px;
+    text-align: center;
+    line-height: 4rem;
+    margin-top: 0px
+}
+@media screen and (min-width: 786px){
+    h1{font-size: 2rem;}
+}
+
+@media screen and (max-width: 768px){
+    h1{font-size: 1.6rem;}
 }
 
 h5 {
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 1.2rem;
     text-align: center;
+    font-weight: bold;
 }
 
-.Slide-infor {
-    margin-top: 5px;
-}
-
-.title {
-    margin-top: -15px;
-    text-align: center;
-}
-
-.maintext{
-    align-items: center;
-    left: 0;
-    right: 0;
+.textcenter{
     top: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
     margin: auto;
-    
+}
+@media screen and (min-width: 1440px){
+    .textcenter{width: 50%;}
 }
 
-em{
-    font-size: medium;
+@media screen and (max-width: 1440px){
+    .textcenter{width: 50%;}
 }
 
-.fill{
-    height: 20px;
+@media screen and (max-width: 768px){
+    .textcenter{width: 75%}
 }
 
-.author{
-    text-align: right;
-    line-height: 2
+@media screen and (max-width: 425px){
+    .textcenter{width: 80%}
 }
 
-p.name{
-    font-size: 1.2;
+@media screen and (max-width: 375px){
+    .textcenter{width: 90%}
 }
 
-p.text{
-    text-indent:2em;
+.textcenter p{
+    text-indent:2rem;
+    line-height: 1.8rem;
+}
+
+.textcenter img , .textcenter video{
+    display: table;
+    width: 50%;
+    margin: 0 auto;
+    border-style: double;
+}
+
+@media screen and (min-width: 786px){
+    .textcenter img , .textcenter video{width: 60%;}
+}
+
+@media screen and (max-width: 768px){
+    .textcenter img , .textcenter video{width: 85%;}
+}
+
+.stitle{
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 3.5rem;
+}
+
+.recommendation{
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+.price{
+    text-align: center;
+    font-size: 1.2rem;
 }
