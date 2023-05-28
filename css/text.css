@@ -1,17 +1,17 @@
-h1{
+.textcenter h1{
     text-align: center;
     line-height: 4rem;
     margin-top: 0px
 }
 @media screen and (min-width: 786px){
-    h1{font-size: 2rem;}
+    .textcenter h1{font-size: 2rem;}
 }
 
 @media screen and (max-width: 768px){
-    h1{font-size: 1.6rem;}
+    .textcenter h1{font-size: 1.6rem;}
 }
 
-h5 {
+.textcenter h5 {
     margin-bottom: 20px;
     font-size: 1.2rem;
     text-align: center;
@@ -65,19 +65,46 @@ h5 {
     .textcenter img , .textcenter video{width: 85%;}
 }
 
-.stitle{
+.textcenter .stitle{
     margin-top: 1.5rem;
     font-size: 1.4rem;
     text-align: center;
     line-height: 3.5rem;
 }
 
-.recommendation{
+.textcenter .recommendation{
     text-align: center;
     line-height: 1.8rem;
 }
 
-.price{
+.textcenter .price{
     text-align: center;
     font-size: 1.2rem;
+}
+
+.talk{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+@media screen and (min-width: 1440px){
+    .talk{width: 50%;}
+}
+
+@media screen and (max-width: 1440px){
+    .talk{width: 50%;}
+}
+
+@media screen and (max-width: 768px){
+    .talk{width: 75%}
+}
+
+@media screen and (max-width: 425px){
+    .talk{width: 80%}
+}
+
+@media screen and (max-width: 375px){
+    .talk{width: 90%}
 }
