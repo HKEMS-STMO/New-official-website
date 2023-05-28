@@ -267,7 +267,7 @@ footer{
 .deng-box2 {
 	position: absolute;
 	top: 38px;
-	left: 0%;
+	left: -2%;
 	z-index: 1;
 }
  
@@ -288,7 +288,7 @@ footer{
 .deng-box5 {
 	position: absolute;
 	top: 38px;
-	right: 0%;
+	right: -2%;
 	z-index: 1;
 }
 
