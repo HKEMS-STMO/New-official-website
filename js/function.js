@@ -89,3 +89,11 @@ jQuery(document).ready(function($) {
     });
 });
 /*-点击效果-*/
+
+    $(function() {
+    $(".img-responsive").click(function (){
+        debugger
+        var _this=$(this);
+        imgShow("#outerdiv","#innerdiv","#bigimg",_this);
+    });
+});

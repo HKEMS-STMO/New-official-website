@@ -56,12 +56,17 @@
     border-style: double;
 }
 
+.textcenter .nostyle{
+    margin-top: 15px;
+    border-style: none;
+}
+
 @media screen and (min-width: 786px){
-    .textcenter img , .textcenter video{width: 60%;min-height: 60%;}
+    .textcenter img , .textcenter video{width: 60%;}
 }
 
 @media screen and (max-width: 768px){
-    .textcenter img , .textcenter video{width: 85%;min-height: 85%;}
+    .textcenter img , .textcenter video{width: 85%;}
 }
 
 .textcenter .stitle{
@@ -106,4 +111,9 @@
 
 @media screen and (max-width: 375px){
     .talk{width: 90%}
+}
+
+.linkdiv{
+    display: block;
+    text-decoration:none;
 }

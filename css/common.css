@@ -163,7 +163,7 @@ button{
 
 .pull-down-menu{
     background-color: rgb(242,242,242);
-    list-style-type:none
+    text-decoration: none;
 }
 
 .pull-down-menu a {
