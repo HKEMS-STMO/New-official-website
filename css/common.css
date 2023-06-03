@@ -243,7 +243,7 @@ footer{
 .NMTest{
   display: none;
   text-align: center;
-  font-family: 华文行楷,STKaiti,Arial,Lucida Grande,Tahoma,sans-serif;
+  font-family: 华文行楷,STKaiti;
 	font-size: 2rem;
 	color: #dc8f03;
 	font-weight:lighter;
@@ -409,13 +409,13 @@ footer{
 }
  
 .deng-t {
-	font-family: 华文行楷,STKaiti,Arial,Lucida Grande,Tahoma,sans-serif;
+	font-family: 华文行楷,STKaiti;
 	font-size: 3.2rem;
 	color: #dc8f03;
 	font-weight:lighter;
 	line-height: 85px;
 	text-align: center;
-  user-select:none
+	user-select:none
 }
  
 .night .deng-t, 
