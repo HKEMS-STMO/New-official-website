@@ -110,14 +110,10 @@
 }
 
 @media screen and (max-width: 375px){
-<<<<<<< Updated upstream
-    .talk{width: 90%}
+    .talk{width: 95%}
 }
 
 .linkdiv{
     display: block;
     text-decoration:none;
-=======
-    .talk{width: 95%}
->>>>>>> Stashed changes
 }
