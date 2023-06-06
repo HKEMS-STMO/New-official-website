@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="page-enter" content="revealTrans(duration=5.0,transition=20)">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>电子木鱼 | 海口实验中学科技社</title>
+    <link rel="prefetch" href="/images/UI/logo-big.png">
+    <link rel="prefetch" href="/function/header.html">
+    <link rel="prefetch" href="/function/footer.html">
+    <meta name="keywords"
+        content="科技社,海口实验中学科技社,海口实验中学,Science and Technology Club,Science and Technology Matching Organization,电子木鱼" />
+    <meta name="description" content="“睡到僧廊响木鱼，庄周蝴蝶两蘧蘧”。此乃海口实验中学科技社集大成之作——电子木鱼，每日一用，方其可修身养性，积累功德。" />
+    <meta name="application-name" content="电子木鱼 | 海口实验中学科技社" />
+    <meta name="msapplication-tooltip" content="电子木鱼 | 海口实验中学科技社" />
+    <meta name="revisit-after" content="1days" />
+    <meta name="revised" content="MQSI, 2023年5月28日" />
+    <meta name="author" content="MQSI, maqingshui@outlook.com">
+    <meta name="renderer" content="webkit">
+    <meta property="og:title" content="电子木鱼 | 海口实验中学科技社">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://new.hkems-stmo.top/pages/activity/use-scheduling.html">
+    <meta property="og:image" content="https://new.hkems-stmo.top/images/UI/logo-small.png">
+    <meta name="copyright" content="本网站版权归海口实验中学科技社所有">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/js/function.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.10.4/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/css/text.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        body {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+
+        a:focus,
+        input:focus,
+        p:focus,
+        div:focus {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-user-modify: read-write-plaintext-only;
+        }
+
+
+
+        .main {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .mubang {
+            position: absolute;
+            top: 105px;
+            left: 0px;
+            width: 200px;
+            height: 200px;
+            background: url('https://zeus10241024.gitee.io/dzmy/img/stick.png') no-repeat;
+            background-size: contain;
+            transform: rotate(-40deg);
+            transform-origin: 10px 70px;
+            cursor: pointer;
+        }
+
+        .move {
+            animation: move 0.5s linear alternate;
+        }
+
+        .auto_move {
+            animation: move 0.5s linear alternate infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotate(-40deg);
+            }
+
+            100% {
+                transform: rotate(-18deg);
+            }
+        }
+
+        .muyu {
+            position: absolute;
+            top: 100px;
+            left: 45px;
+            width: 220px;
+            height: 220px;
+            background: url('https://zeus10241024.gitee.io/dzmy/img/muyu.png') no-repeat;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        .muyu:active {
+            transform: scale(0.9);
+        }
+
+        .music {
+            display: none;
+        }
+
+        .control {
+            width: 100px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        .auto {
+            width: 18px;
+            height: 18px;
+        }
+
+        .auto_name {
+            color: white;
+            font-size: 18px;
+            padding-right: 12px;
+        }
+
+        .count {
+            width: 200px;
+            line-height: 40px;
+            margin: 0 auto;
+            margin-top: 20px;
+            color: white;
+            font-size: 18px;
+            padding-right: 12px;
+        }
+
+        .num {
+            color: #ff9607;
+            font-size: 26px;
+        }
+
+        #tips {
+            position: absolute;
+            visibility: hidden;
+            color: #ff9607;
+            font-size: 26px;
+            margin: 0 auto;
+            top: 100px;
+            left: 40%;
+            opacity: 0;
+            transition: top 0.6s;
+        }
+
+        .talk {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body id="top">
+    <div class="header"></div>
+    <div class="textcenter">
+        <div class="main">
+            <div id="mubang" class="mubang"></div>
+            <div class="muyu" id="muyu"></div>
+        </div>
+
+        <div class="control">
+            <span class="auto_name">自动</span>
+            <input type="checkbox" name="control" id="auto" class="auto">
+        </div>
+        <!-- 音乐 -->
+        <div class="music">
+            <audio src="https://zeus10241024.gitee.io/dzmy/music.mp3" id="music"></audio>
+        </div>
+        <!-- 功德统计 -->
+        <div class="count">
+            <div>
+                <span>今日已获得功德: </span>
+                <span id="today_count" class="num">0</span>
+            </div>
+            <div>
+                <span>本机总获得功德:</span>
+                <span id="all_count" class="num">0</span>
+            </div>
+        </div>
+        <div id="tips">功德+1</div>
+        <script src="https://zeus10241024.gitee.io/dzmy/index.js"></script>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>
