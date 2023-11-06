@@ -1,8 +1,4 @@
 /* 页眉 */
-html {
-  filter: grayscale(1)
-}
-
 ::selection {
   color: #fff;
   background: #66c1fa
