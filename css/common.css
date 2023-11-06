@@ -1,11 +1,7 @@
 /* 页眉 */
-html {
-  filter: grayscale(1)
-}
-
 ::selection {
   color: #fff;
-  background: #66c1fa
+  background: rgba(102, 193, 250, 0.75)
 }
 
 h1{

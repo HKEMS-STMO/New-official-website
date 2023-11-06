@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <title>2048小游戏 | 海口实验中学科技社</title>
+  <meta name="keywords" content="科技社,海口实验中学科技社,海口实验中学,Science and Technology Club,Science and Technology Matching Organization,2048" />
+  <meta name="description" content="本页面是海口实验中学科技社移植汉化后的2048游戏版本，您可以在 http://git.io/2048 游玩原版游戏" />
+  <meta name="application-name" content="海口实验中学科技社 | HKEMS-STMO" />
+  <meta name="msapplication-tooltip" content="海口实验中学科技社 | HKEMS-STMO" />
+  <meta name="revisit-after" content="1days" />
+  <meta name="revised" content="马志伟, 2023年9月29日" />
+  <meta name="author" content="马志伟, maqingshui@outlook.com">
+  <meta name="renderer" content="webkit">
+  <meta property="og:title" content="海口实验中学科技社 | HKEMS-STMO">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content=" https://hkems-stmo.top/">
+  <meta property="og:image" content="https://new.hkems-stmo.top/images/UI/logo-small.png">
+  <meta name="copyright" content="本网站版权归海口实验中学科技社所有">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="/js/function.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="style/main.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="heading" style="user-select:none;">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">本游戏由<strong><a href="/" title="点此返回海口实验中学科技社主页" style="text-decoration: none"> 海口实验中学科技社 </a></strong>汉化。</p>
+      <a class="restart-button" style="user-select:none;">重来一局</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <a class="keep-playing-button">继续</a>
+          <a class="retry-button">再试一次</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <a href="/">点此返回海口实验中学科技社主页</a><br><br>
+      <strong class="important">玩法：</strong> 使用 <strong>方向键</strong> 移动磁贴。当两个数字相同的瓷砖接触时，它们会<strong>合并相加为一个！</strong>
+    </p>
+    <hr>
+    <p>
+      <strong class="important">温馨提示：</strong> 本页面是 海口实验中学科技社 移植汉化后的2048游戏版本，您可以在 <a
+        href="http://git.io/2048">http://git.io/2048.</a> 游玩原版游戏（需要魔法）
+    </p>
+    <hr>
+    <p>
+      本页面由 <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli </a> 创建，基于 <a
+        href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">Veewo Studio</a> 的1024，在概念上类似于Asher
+      Vollmer的 <a href="http://asherv.com/threes/" target="_blank">Threes</a>。
+    </p>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>
+
+</html>
