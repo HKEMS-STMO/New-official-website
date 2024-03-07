@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="page-enter" content="revealTrans(duration=5.0,transition=20)">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <title>时钟 | 海口实验中学科技社</title>
+    <title>时钟与计时器 | 海口实验中学科技社</title>
     <link rel="prefetch" href="/images/UI/logo-big.png">
     <link rel="prefetch" href="/function/header.html">
     <link rel="prefetch" href="/function/footer.html">
     <meta name="keywords"
-        content="计时器,时钟,海口实验中学科技社,海口实验中学,Science and Technology Club,Science and Technology Matching Organization" />
+        content="时钟与计时器,计时器,时钟,海口实验中学科技社,海口实验中学,Science and Technology Club,Science and Technology Matching Organization" />
     <meta name="description" content="" />
     <meta name="application-name" content="海口实验中学科技社 | HKEMS-STMO" />
     <meta name="msapplication-tooltip" content="海口实验中学科技社 | HKEMS-STMO" />
     <meta name="revisit-after" content="1days" />
-    <meta name="revised" content="马志伟, 2023年4月28日" />
+    <meta name="revised" content="马志伟, 2024年3月7日" />
     <meta name="author" content="马志伟, maqingshui@outlook.com">
     <meta name="renderer" content="webkit">
     <meta property="og:title" content="海口实验中学科技社 | HKEMS-STMO">
@@ -32,6 +32,11 @@
     <link rel="stylesheet" href="/css/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="/css/common.css" />
     <link rel="stylesheet" type="text/css" href="/css/index.css" />
+    <style>
+        #container {
+            background-color: white;
+        }
+    </style>
 </head>
 
 <body id="top">
@@ -41,55 +46,69 @@
     </div>
     <!--页眉 结束-->
 
-    <div class="container mt-5">
+    <audio id="countdownAudio" src="/music/4月 星桜-はな-.mp3"></audio>
+
+    <div class="container mt-5" id="container">
         <!-- 标签页 -->
         <ul class="nav nav-tabs" id="myTabs">
             <li class="nav-item">
-                <a class="nav-link active" id="clock-tab" data-bs-toggle="tab" href="#clock"><i class="bi bi-clock-fill"></i>    时钟</a>
+                <a class="nav-link active" id="clock-tab" data-bs-toggle="tab" href="#time"><i
+                        class="bi bi-clock-fill"></i> 时钟</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="countdown-tab" data-bs-toggle="tab" href="#countdown"><i class="bi bi-hourglass-split"></i>    倒计时</a>
+                <a class="nav-link" id="countdown-tab" data-bs-toggle="tab" href="#countdown"><i
+                        class="bi bi-hourglass-split"></i> 倒计时</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="stopwatch-tab" data-bs-toggle="tab" href="#stopwatch"><i class="bi bi-stopwatch-fill"></i>    秒表</a>
+                <a class="nav-link" id="stopwatch-tab" data-bs-toggle="tab" href="#stopwatch"><i
+                        class="bi bi-stopwatch-fill"></i> 秒表</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="fullscreen-tab" data-bs-toggle="tab" href="#fullscreen"><i class="bi bi-alarm-fill"></i>    闹钟</a>
+                <a class="nav-link" id="fullscreen-tab" data-bs-toggle="tab" href="#fullscreen"><i
+                        class="bi bi-alarm-fill"></i> 闹钟</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="increase-font-tab" href="javascript:void(0);" onclick="increaseFontSize()" alt="增加字体大小"><i class="bi bi-plus-circle"></i></a>
+                <a class="nav-link" id="increase-font-tab" href="javascript:void(0);" onclick="increaseFontSize()"
+                    alt="增加字体大小"><i class="bi bi-plus-circle"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="increase-font-tab" href="javascript:void(0);" onclick="Reducefontsize()" alt="减小字体大小"><i class="bi bi-patch-minus"></i></a>
+                <a class="nav-link" id="increase-font-tab" href="javascript:void(0);" onclick="Reducefontsize()"
+                    alt="减小字体大小"><i class="bi bi-dash-circle"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="increase-font-tab" href="javascript:void(0);" onclick="toggleFullScreen()" alt="全屏"><i class="bi bi-arrows-fullscreen"></i></a>
+                <a class="nav-link" id="increase-font-tab" href="javascript:void(0);" onclick="toggleFullScreen()"
+                    alt="全屏"><i class="bi bi-arrows-fullscreen"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="increase-font-tab" href="javascript:void(0);" onclick="exitFullScreen()"
+                    alt="全屏"><i class="bi bi-fullscreen-exit"></i></a>
             </li>
         </ul>
 
 
-        <div class="tab-content mt-3">
+        <div class="tab-content mt-3" style=" margin-top: 10%; margin-bottom: 17%;">
             <!-- 时钟 -->
-            <div class="tab-pane fade show active" id="clock">
-                <div class="container mt-5">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3 text-center">
-                            <h1 class="display-4" id="clock"></h1>
-                        </div>
-                    </div>
-                </div>
+            <div class="tab-pane fade show active" id="time">
+                <h3 style="text-align: center; margin-bottom: -30px;">现在是北京时间</h3>
+                <h1 class="display-4" id="clock" style="text-align: center;"></h1>
             </div>
+
             <!-- 倒计时 -->
             <div class="tab-pane fade" id="countdown">
                 <div class="row">
                     <div class="col-md-6 offset-md-3 text-center">
-                        <label for="countdownInput">Countdown Timer (seconds):</label>
-                        <input type="number" id="countdownInput" min="1" value="60">
-                        <button onclick="startCountdown()">Start Countdown</button>
+                        <h3 style="text-align: center;">倒计时</h3>
+                        <div class="input-group mb-3" style="margin: auto;width: 50%;margin-bottom: 20px;">
+                            <input type="number" class="form-control" id="countdownInput" placeholder=".form-control-sm"
+                                aria-label="times" min="1" value="5">
+                            <span class="input-group-text" id="basic-addon2">分钟</span>
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="开始倒计时" onclick="startCountdown()"></button>
                         <h3 id="countdownDisplay"></h3>
                     </div>
                 </div>
             </div>
+
             <!-- 秒表 -->
             <div class="tab-pane fade" id="stopwatch">
                 <div class="row">
@@ -103,7 +122,6 @@
             <div class="tab-pane fade" id="fullscreen">
                 <div class="row">
                     <div class="col-md-6 offset-md-3 text-center">
-                        <button onclick="toggleFullScreen()">Toggle Fullscreen</button>
                     </div>
                 </div>
             </div>
@@ -111,13 +129,21 @@
     </div>
 
     <script>
+        // 获取当前时间戳
+        const currentTimestamp = Math.floor(Date.now() / 1000);
+        // 保存当前时间戳到localStorage
+        localStorage.setItem('lastTimestamp', currentTimestamp);
+
         // 全屏切换函数
         function toggleFullScreen() {
-            if (document.fullscreenElement) {
-                document.exitFullscreen();
-            } else {
-                document.documentElement.requestFullscreen();
-            }
+            const fullscreenDiv = document.getElementById('container');
+            fullscreenDiv.classList.add('fullscreen');
+            fullscreenDiv.requestFullscreen();
+        }
+
+        // 全屏退出函数
+        function exitFullScreen() {
+            document.exitFullscreen();
         }
 
         // 倒计时相关变量
@@ -127,7 +153,11 @@
         // 启动倒计时函数
         function startCountdown() {
             // 获取输入的倒计时时间
-            countdownTime = parseInt(document.getElementById('countdown').value, 10);
+            const countdownTimeMinutes = parseInt(document.getElementById('countdownInput').value, 10);
+            const countdownTimeSeconds = countdownTimeMinutes * 60;
+
+            // 设置倒计时时间
+            countdownTime = countdownTimeSeconds;
 
             // 每秒更新倒计时显示
             countdownInterval = setInterval(function () {
@@ -146,7 +176,13 @@
             const seconds = countdownTime % 60;
             const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             document.getElementById('countdownDisplay').innerText = formattedTime;
+
+            if (countdownTime === 0) {
+                // 播放音乐
+                document.getElementById('countdownAudio').play();
+            }
         }
+
 
         // 秒表相关变量
         let stopwatchRunning = false;
@@ -178,18 +214,38 @@
         // 增大字体大小的函数
         function increaseFontSize() {
             const clockElement = document.getElementById('clock');
-            const currentSize = window.getComputedStyle(clockElement).fontSize;
-            const newSize = parseInt(currentSize) + 30;
-            clockElement.style.fontSize = newSize + 'px';
+            const currentSize = parseInt(window.getComputedStyle(clockElement).fontSize);
+            const increment = 30;
+            const maxSize = 200; // 设置最大字体大小
+
+            const newSize = currentSize + increment;
+
+            if (newSize <= maxSize) {
+                clockElement.style.fontSize = newSize + 'px';
+            } else {
+                // 超过最大字体大小时不再增大字体
+                console.log('已达到最大字体大小限制');
+            }
         }
+
 
         // 减小字体大小的函数
         function Reducefontsize() {
             const clockElement = document.getElementById('clock');
-            const currentSize = window.getComputedStyle(clockElement).fontSize;
-            const newSize = parseInt(currentSize) - 20;
-            clockElement.style.fontSize = newSize + 'px';
+            const currentSize = parseInt(window.getComputedStyle(clockElement).fontSize);
+            const increment = 25;
+            const minSize = 30; // 设置最大字体大小
+
+            const newSize = currentSize - increment;
+
+            if (newSize >= minSize) {
+                clockElement.style.fontSize = newSize + 'px';
+            } else {
+                // 小于最小字体大小时不再减小字体
+                console.log('已达到最小字体大小限制');
+            }
         }
+
 
         // Function to update the clock
         function updateClock(timestamp) {
