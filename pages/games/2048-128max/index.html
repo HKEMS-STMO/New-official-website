@@ -25,9 +25,57 @@
   <link rel="stylesheet" type="text/css" href="/css/common.css" />
   <link rel="stylesheet" type="text/css" href="/css/index.css" />
   <link rel="stylesheet" type="text/css" href="style/main.css" />
+  <script src="/js/function.js"></script>
+
+  <style>
+    /* CSS样式 */
+    .overlay1 {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* 半透明黑色背景 */
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal {
+      height: 430px;
+      width: 500px;
+      margin: 100px auto;
+      text-align: center;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 
-<body style="margin-top: 15px;">
+<body style="margin-top: -50px;">
+
+  <div class="container" style="margin-top: 100px;">
+    <div class="row">
+      <div class="overlay1" id="overlay1">
+        <div class="col-sm-2 col-lg-4"></div>
+        <div class="popup col-sm-8 col-lg-4  modal" style="height: 500px;">
+          <p class="popup_title" style="font-weight: bold;">任 务 完 成 ！</p>
+          <p>太棒了，你达到了128分以上！<br>请凭此界面寻找我社工作人员盖章</p>
+          <div>
+            <img src="/images/photo/wqx2077.jpg" width="250px">
+          </div>
+          <div class="popup_line"></div>
+          <div class="popup_btn">
+            <button class="confirmBtn ag overflow-hidden" onclick="location.reload();" style="margin-top: -10px;">确认</button>
+          </div>
+        </div>
+        <div class="col-sm-2 col-lg-4"></div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="container">
     <div class="heading" style="user-select:none;">
       <h1 class="title">2048</h1>
@@ -40,7 +88,10 @@
     <div class="above-game">
       <p class="game-intro"></p>
       <p class="game-explanation" style="margin-top: 5px;">
-        <strong class="important">玩法：</strong> 使用 <strong>方向键</strong> 移动磁贴。当两个数字相同的瓷砖接触时，它们会<strong>合并相加为一个！<br><p style="color: red;">分数大于128即算作完成任务！<p></strong>
+        <strong class="important">玩法：</strong> 使用 <strong>方向键</strong> 移动磁贴。当两个数字相同的方块接触时，它们会<strong>合并相加为数值更大的方块！<br>
+          <p style="color: red;">分数大于128即算作完成任务！
+          <p>
+        </strong>
       </p>
       <a class="restart-button" style="user-select:none;">重来一局</a>
     </div>
@@ -86,60 +137,62 @@
       </div>
     </div>
 
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
+    <script src="js/bind_polyfill.js"></script>
+    <script src="js/classlist_polyfill.js"></script>
+    <script src="js/animframe_polyfill.js"></script>
+    <script src="js/keyboard_input_manager.js"></script>
+    <script src="js/html_actuator.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/tile.js"></script>
+    <script src="js/local_storage_manager.js"></script>
+    <script src="js/game_manager.js"></script>
+    <script src="js/application.js"></script>
 
-  <script>
+    <script>
 
-    // 清空本地存储
-    function clearStorage() {
-      const cookies = document.cookie.split(';');
-      localStorage.clear();
-      alert('恭喜你完成任务！');
-      setTimeout(5000)
-      location.reload();
-    }
-
-    const scoreContainer = document.getElementById('scoreContainer');
-
-    // 检测分数函数
-    function checkScore() {
-      const scoreText = scoreContainer.innerText.trim();
-      const score = parseInt(scoreText);
-      if (!isNaN(score) && score >= 128) {
-        console.log('分数大于等于128');
-        clearStorage()
-      } else {
-        console.log('分数小于128或者无效');
+      // 清空本地存储
+      function clearStorage() {
+        const cookies = document.cookie.split(';');
+        localStorage.clear();
+        setTimeout(openModal, 500);
       }
-    }
 
-    // 监听键盘输入事件
-    document.addEventListener('keydown', function (event) {
-      const inputKey = event.key;
-      console.log('键盘输入:', inputKey);
+      function openModal() {
+        overlay1.style.display = 'flex';
+      }
 
-      // 等待1秒后触发检测函数
-      setTimeout(checkScore, 100); // 1000毫秒 = 1秒
-    });
+      const scoreContainer = document.getElementById('scoreContainer');
 
-    // 监听鼠标点击事件
-    document.addEventListener('click', function (event) {
-      console.log('鼠标点击:', event.clientX, event.clientY);
+      // 检测分数函数
+      function checkScore() {
+        const scoreText = scoreContainer.innerText.trim();
+        const score = parseInt(scoreText);
+        if (!isNaN(score) && score >= 128) {
+          console.log('分数大于等于128');
+          clearStorage()
+        } else {
+          console.log('分数小于128或者无效');
+        }
+      }
 
-      // 等待1秒后触发检测函数
-      setTimeout(checkScore, 100); // 1000毫秒 = 1秒
-    });
+      // 监听键盘输入事件
+      document.addEventListener('keydown', function (event) {
+        const inputKey = event.key;
+        console.log('键盘输入:', inputKey);
 
-  </script>
+        // 等待1秒后触发检测函数
+        setTimeout(checkScore, 100); // 1000毫秒 = 1秒
+      });
+
+      // 监听鼠标点击事件
+      document.addEventListener('click', function (event) {
+        console.log('鼠标点击:', event.clientX, event.clientY);
+
+        // 等待1秒后触发检测函数
+        setTimeout(checkScore, 100); // 1000毫秒 = 1秒
+      });
+
+    </script>
 
 </body>
 
