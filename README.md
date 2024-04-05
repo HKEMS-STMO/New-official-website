@@ -1,5 +1,5 @@
 # 海口实验中学科技社新版官方网站 HKEMS-STMO New version of the closed beta website
-![logo](https://hkems-stmo.top/images/up_images/logo.png)
+![logo](http://hkems-stmo.top/images/UI/logo-big.png)
 ### https://hkems-stmo.top/
 ### 关于我们:
 ### About us:
